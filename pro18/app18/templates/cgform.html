@@ -1,0 +1,57 @@
+{%extends 'master.html'%} 
+
+{%block 'main'%} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color:white;
+            background-color:#192655;
+            fontz-size:6px;
+        #box12{
+            margin-top:20px;
+            margin-bottom:10px;
+            border: 6px solid white;
+            height: 110px;
+            width: 400px ;
+            background-color:#3876BF;
+            transition: 5s; 
+            transition-timing-function: ease-in-out;
+            display:flex;
+            justify-content:center;
+        
+        }
+        #box12:hover{width:600px ;}
+        
+        }
+      
+      </style>
+</head>
+<div id="box11" align='center'>
+    <div id="box12" align="center">
+         <h1 align="center">COLLEGE  FORM</h1>
+    </div>
+</div>
+<body>
+    <form method="POST">
+        {%csrf_token%}
+        <table border="4px" align="center" cellpadding="20px" cellspacing="20px" font="8px" background-color='yellow'>
+       
+            {{form.as_table}}
+
+        
+        <tr>
+            <td><input type="submit"></td>
+            <td><input type="reset"></td>
+        </tr>
+    </table>
+
+    </form>
+</body>
+</html>
+{%endblock%} 

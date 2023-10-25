@@ -1,0 +1,117 @@
+{%extends 'master.html'%} 
+
+{%block 'main'%} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stdet</title>
+    <style>
+        body{
+            color:white;
+            background-color:#192655;
+            
+        #box3{
+            margin-top:20px;
+            margin-bottom:10px;
+            border: 6px solid white;
+            height: 110px;
+            width: 400px ;
+            background-color:#4F709C;
+            transition: 5s; 
+            transition-timing-function: ease-in-out;
+            display:flex;
+            justify-content:center;
+        
+        }
+        #box3:hover{width:600px ;}
+        #row1{
+            background-color:#3085C3;
+            text-align: left;
+        }  
+        #row2{
+            background-color:#89CFF3;
+            text-align: left;
+        }      
+        }
+        
+    </style>
+</head>
+<div  id="box4" align="center">
+    <div id="box3" align="center">  
+       <h1  align="center">...STUDENT  DETAILS...</h1>
+    </div> 
+</div>      
+
+<body>
+    <table border="8pxsolidwhite" align="center" cellpadding="10px" cellspacing="15px" text-align="center">
+        <thead>
+            <tr id="row1">
+            <th>ID</th>
+            <th>NAME</th>
+            <th>CONTACTNUMBER</th>
+            <th>EMAIL</th>
+            <th>PAY AMOUNT</th>
+            <th>DATE OF BIRTH</th>
+            <th>GENDER</th>
+            <th>NAME OF PARENT</th>
+            <th>ADHAAR NO</th>
+            <th>ADDRESS</th>
+            <th>PERMANENTADDRESS</th>
+            <th>COURSE</th>
+            <th colspan="5">ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            
+            {%for i in data%}
+
+            <tr id="row2">
+
+                <td  class="table-primary">{{i.id}}</td>
+                <td  class="table-warning">{{i.name}}</td>
+                <td  class="table-secondary">{{i.contactnumber}}</td>
+                <td  class="table-danger">{{i.email}}</td>
+                <td  class="table-info">{{i.payamount}}</td>
+                <td  class="table-info">{{i.dateofbirth}}</td>
+                <td  class="table-info">{{i.gender}}</td>
+                <td  class="table-info">{{i.nameofparent}}</td>
+                <td  class="table-info">{{i.aadhaarno}}</td>
+                <td  class="table-info">{{i.address}}</td>
+                <td  class="table-info">{{i.permanentaddress}}</td>
+                <td  class="table-info">{{i.course}}</td>
+                
+                
+
+               
+
+
+                {% comment %} <td><a href="del1?id={{i.id}}">Delete1</a></td>  {% endcomment %}
+                {% comment %} using normal method {% endcomment %}
+                <td><a href="del2/{{i.id}}">Delete</a></td>
+                {% comment %} #using dynamic method {% endcomment %}
+                <td><a href="update/{{i.id}}">Update</a></td>
+                <td><a href="add/{{i.id}}">Add</a></td>
+               
+
+              
+               
+
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
+{%endblock%} 
+
+
+
+
+ 

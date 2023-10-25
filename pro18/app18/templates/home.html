@@ -1,0 +1,72 @@
+{%extends 'master.html'%} 
+
+{%block 'main'%} 
+
+<head>
+    <title>
+        hm pg
+    </title>
+      
+
+
+<style>
+    body{
+      background-color:#192655;
+      color:white;
+      {% comment %} rgb(237, 236, 202); {% endcomment %}
+      .link  { color: white; }
+  
+
+
+
+    {% comment %} #box1{
+        border: 6px solid palevioletred;
+        height: 210px;
+        width: 400px;
+        background-color: aquamarine;
+        justify-content:center;
+        align
+    } {% endcomment %}
+    #box2{
+        margin-top:30px;
+        border: 6px solid white;
+        height: 200px;
+        width: 500px ;
+        background-color:#3085C3;
+        transition: 5s; 
+        transition-timing-function: ease-in-out;
+        display:flex;
+        justify-content:center;
+
+    }
+    
+    #box2:hover{width:700px ;}
+    }
+</style>    
+<body>
+<fieldset border="8pxsolidblack"> 
+<div id="box1" class="cat" align="center">
+    <div id="box2" class="cat1" align="center">
+        <h1 align="center" > ...WELCOME TO THE STUDENT COLLEGE MANAGEMENT SYSTEM...</h1>
+    </div>
+</div>
+<hr>
+<br>
+<br>
+<fieldset border="8pxsolidblack">
+<h1 align="center" t><a  class="link" href="stform"><b>1.Student Form</b></a></h1>
+<br>
+<br>
+<h1  align="center"><a class="link" href="stdetails"><b>2.Student Details</b></a></h1>
+<br>
+<br>
+<h1  align="center"><a  class="link" href="cgform"><b>3.College Form</b></a></h1>
+<br>
+<br>
+<h1 align="center"><a class="link" href="cgdetails"><b>4.College Details</b></a></h1> 
+</fieldset>
+</fieldset>
+
+</body>
+</html>
+{%endblock%} 

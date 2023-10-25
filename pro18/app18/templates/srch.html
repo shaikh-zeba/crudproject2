@@ -1,0 +1,61 @@
+{%extends 'master.html' %}
+{%block 'main'%}
+<h1>search</h1>
+<table  border="6pxgroovesolid" class="table">
+    <thead>
+        <tr>
+            <th>SR NO</th>
+            <th>COLLEGENAME</th>
+            <th>DEPARTMENTNAME </th>
+            <th>SUBJECT1 </th>
+            <th>SUBJECT2 </th>
+            <th>SUBJECT3</th>
+            <th colspan="12">STUDENTS</td>
+            {% comment %} <th class="table-secondary" >SrNo</th>
+            <th class="table-warning"scope="col" >Amount</th>
+            <th class="table-success" scope="col">date</th>
+            <th class="table-danger"scope="col">type</th>
+            <th class="table-info" scope="col">Description</th>
+            <th class="table-primary"scope="col">Data</th> {% endcomment %}
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in data1%}
+
+        <tr>
+         
+            <td>{{i.srno}}</td>
+            <td>{{i.collegename}}</td>
+            <td>{{i.departmentname}}</td>
+            <td>{{i.subject1}}</td>
+            <td>{{i.subject2}}</td>
+            <td>{{i.subject3}}</td>
+            <td>{{i.student.id}}</td>
+            <td>{{i.student.name}}</td>
+            <td>{{i.student.contactnumber}}</td>
+            <td>{{i.student.dateofbirth}}</td>
+            <td>{{i.student.gender}}</td>
+            <td>{{i.student.nameofparent}}</td>
+            <td>{{i.student.aadhaarno}}</td>
+            <td>{{i.student.email}}</td>
+            <td>{{i.student.address}}</td>
+            <td>{{i.student.permanentaddress}}</td>
+            <td>{{i.student.payamount}}</td>
+            <td>{{i.student.course}}</td>
+          
+          
+
+          
+           
+            
+
+            <!-- <td>{{i.password}}</td> -->
+        </tr>
+        {%endfor%}
+        
+      
+        
+    </tbody>
+</table>
+
+{%endblock%}

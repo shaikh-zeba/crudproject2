@@ -1,0 +1,110 @@
+{%extends 'master.html'%} 
+
+{%block 'main'%} 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          background-color:#192655;
+          color:white;
+          
+        #box6{
+            margin-top:10px;
+            margin-bottom:10px;
+            border: 8px solid white;
+            height: 150px;
+            width: 500px ;
+            background-color:#4F709C;
+            transition: 5s; 
+            transition-timing-function: ease-in-out;
+            display:flex;
+            justify-content:center;
+        
+        }
+        #box6:hover{width:600px ;}
+        #row3{
+            background-color:#3085C3;
+            text-color:white;
+            text-align: center;
+        }  
+        #row4{
+            background-color:#30AADD;
+            text-align: center;
+            text-color:black;
+        }        
+        }
+    </style>    
+
+   
+</head>
+<div  id="box5" align="center">
+    <div id="box6" align="center">  
+       <h1  align="center">...COLLEGE STUDENTS DETAILS...</h1>
+    </div> 
+</div>      
+
+
+<body>
+    <table border="8px" align="center" cellpadding="10px" cellspacing="15px" text-align="center">
+        {% comment %} border="6px" align="centre" cellpadding="10px" cellspacing="10px">
+        <thead> {% endcomment %}
+            <tr id="row3">
+            <th>SR NO</th>
+            <th>COLLEGENAME</th>
+            <th>DEPARTMENTNAME </th>
+            <th>SUBJECT1 </th>
+            <th>SUBJECT2 </th>
+            <th>SUBJECT3</th>
+            <th colspan="12">STUDENTS DETAILS</td>   
+            
+            </tr>
+            <!-- <tr>Password</tr> -->
+        </thead>
+           <tbody>
+
+             {%for i in data%}
+
+            <tr id="row4">
+             
+                <td>{{i.srno}}</td>
+                <td>{{i.collegename}}</td>
+                <td>{{i.departmentname}}</td>
+                <td>{{i.subject1}}</td>
+                <td>{{i.subject2}}</td>
+                <td>{{i.subject3}}</td>
+                <td>{{i.student.id}}</td>
+                <td>{{i.student.name}}</td>
+                <td>{{i.student.contactnumber}}</td>
+                <td>{{i.student.dateofbirth}}</td>
+                <td>{{i.student.gender}}</td>
+                <td>{{i.student.nameofparent}}</td>
+                <td>{{i.student.aadhaarno}}</td>
+                <td>{{i.student.email}}</td>
+                <td>{{i.student.address}}</td>
+                <td>{{i.student.permanentaddress}}</td>
+                <td>{{i.student.payamount}}</td>
+                <td>{{i.student.course}}</td>
+              
+              
+    
+              
+               
+                
+
+                <!-- <td>{{i.password}}</td> -->
+            </tr>
+            {%endfor%}
+           </tbody>
+    </table>
+
+
+</body>
+
+</html>
+{%endblock%} 

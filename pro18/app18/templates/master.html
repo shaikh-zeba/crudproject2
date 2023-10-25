@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+{% load static %}
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% comment %} <link rel="stylesheet" href="{% static'css/boost.css'%}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/boost.css' %}">
+    <style>
+      body{
+        .hm{ color: white; }
+      }
+    </style>
+    
+</head>
+<body>
+    <nav class="cl1">    
+    <nav class="cl2"> 
+   <header>
+    
+   
+  </header>   
+
+  <div class="page">
+    {% block 'main' %}
+
+    {% endblock %}
+  </div>
+
+  <footer></footer>
+
+  <script src="{% static 'js/boost.js' %}"></script>
+</body>
+</html>

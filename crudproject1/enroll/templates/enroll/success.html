@@ -1,0 +1,24 @@
+{% extends 'enroll/base.html' %}
+
+{% block content %}
+<html>
+    <head>
+        <title>
+            succes pg
+        </title>
+    </head>
+    <body>
+        <br>
+        <br>
+       
+        <h4 class = "text-center alert alert-info">{{nmm}} your data is submitted successfully.</h4>
+        <br>
+        <br> 
+        <br>
+
+        <h6 align="center">
+        <a href="{% url 'addandshow' %}" class="btn btn-info" align="center">Back to Home</a>
+        </h6>
+    </body>
+    </html>
+{% endblock  %}
